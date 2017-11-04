@@ -1,6 +1,7 @@
 			<!-- footer -->
 			<footer class="footer" role="contentinfo">
-				<div>
+                            <?php if( function_exists('slbd_display_widgets') ) { echo slbd_display_widgets(); } ?>
+		
 				<div>
 				<!-- copyright -->
 				<p class="copyright">
@@ -8,16 +9,12 @@
 				</p>
 				</div>
 				<!-- /copyright -->
-				<div>
-					Contacto
-				</div>
-				<div>
-					Mapa del Sitio
-				</div>
-				</div>
+				
+			
 
 			</footer>
 			<!-- /footer -->
+                        
 
 		</div>
 		<!-- /wrapper -->

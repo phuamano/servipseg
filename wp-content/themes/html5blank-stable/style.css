@@ -132,9 +132,10 @@ input:focus {
 }
 .footer a {
  color: gray;
+ 
 }
 
-.mini-wrapper {
+.footer-wrapper {
  max-width: 1280px;
  margin: 0 auto;
 }
@@ -220,7 +221,7 @@ input:focus {
  color: white;
  background: black;
  padding: 20px 10px;
- font-size: 14px;
+ font-size: 1px;
 }
  
 #contact-us form {
