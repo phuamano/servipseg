@@ -179,6 +179,9 @@ class installerGmp {
 		if(!dbGmp::exist($wpPrefix.GMP_DB_PREF."marker_groups", 'sort_order')) {
 			dbGmp::query("ALTER TABLE @__marker_groups ADD sort_order tinyint(1) NOT NULL DEFAULT '0';");
 		}
+		if(!dbGmp::exist($wpPrefix.GMP_DB_PREF."marker_groups", 'parent')) {
+			dbGmp::query("ALTER TABLE @__marker_groups ADD parent tinyint(1) NOT NULL DEFAULT '0' AFTER params;");
+		}
 		$markerGroupsClearedInvalid = get_option($wpPrefix. GMP_DB_PREF. 'mg_cleared_inv', 0);
 		if(!$markerGroupsClearedInvalid) {
 			dbGmp::query('UPDATE @__markers SET marker_group_id = 0 WHERE marker_group_id = 1');	// This was wrong update in markers table before - fix this one time before update plugin

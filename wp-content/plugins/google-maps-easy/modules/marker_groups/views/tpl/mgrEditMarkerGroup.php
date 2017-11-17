@@ -25,8 +25,22 @@
 							<td>
 								<?php echo htmlGmp::text('marker_group[title]', array(
 									'value' => $this->editMarkerGroup ? $this->marker_group['title'] : '',
-									'attrs' => 'style="width: 60%;" id="marker_group_title"',
+									'attrs' => 'style="width: 50%;" id="marker_group_title"',
 									'required' => true))?>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">
+								<label for="marker_group_parent">
+									<?php _e('Parent Category', GMP_LANG_CODE)?>:
+								</label>
+							</th>
+							<td>
+								<?php echo htmlGmp::selectbox('marker_group[parent]', array(
+									'options' => $this->parentsList,
+									'value' => $this->editMarkerGroup ? $this->marker_group['parent'] : 0,
+									'attrs' => 'style="width: 50%;" id="marker_group_parent"',
+								))?>
 							</td>
 						</tr>
 						<tr>

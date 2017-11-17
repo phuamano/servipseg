@@ -4,8 +4,8 @@ Author URI: https://supsystic.com/
 Plugin URI: https://supsystic.com/plugins/google-maps-plugin
 Donate link: https://supsystic.com/plugins/google-maps-plugin
 Tags: google map, map, Google Maps, map markers, location
-Tested up to: 4.8.2
-Stable tag: 1.8.2
+Tested up to: 4.9
+Stable tag: 1.8.3
 
 Google Maps with markers, locations and clusterization. Any data on the google map: text, images, videos. Custom google map markers with map builder
 
@@ -211,6 +211,12 @@ Copy and paste the shortcode into your post or page and Google Maps Easy will au
 6. Google Map Stylizations. Make your map unique with our Map Themes!
 
 == Changelog ==
+
+= Google Map Plugin v1.8.3 / 08.11.2017 =
+
+ * Added ability to set parent for marker groups
+ * Fixed autocomplete function
+ * Small styles fix
 
 = Google Map Plugin v1.8.2 / 11.10.2017 =
 

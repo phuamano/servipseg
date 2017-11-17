@@ -13,12 +13,19 @@ class marker_groupsViewGmp extends viewGmp {
 		frameGmp::_()->addScript('admin.mgr.edit', $this->getModule()->getModPath(). 'js/admin.marker_groups.edit.js');
 		frameGmp::_()->addStyle('admin.mgr', $this->getModule()->getModPath() . 'css/admin.marker.groups.css');
 		$editMarkerGroup = $id ? true : false;
+		$allMarkerGroups = $this->getModel()->getAllMarkerGroups();
+		$parentsList = array( 0 => __('None', GMP_LANG_CODE) );
+		foreach($allMarkerGroups as $index => $group) {
+			if($group['id'] == $id) continue;
+			$parentsList[$group['id']] = $group['title'];
+		}
 		if($editMarkerGroup) {
 			$markerGroup = $this->getModel()->getMarkerGroupById( $id );
 			$this->assign('marker_group', $markerGroup);
 			frameGmp::_()->addJSVar('admin.mgr.edit', 'mgrMarkerGroup', $markerGroup);
 		}
 		$this->assign('editMarkerGroup', $editMarkerGroup);
+		$this->assign('parentsList', $parentsList);
 		$this->assign('addNewLink', frameGmp::_()->getModule('options')->getTabUrl('marker_groups_add_new'));
 		return parent::getContent('mgrEditMarkerGroup');
 	}

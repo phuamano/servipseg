@@ -186,8 +186,8 @@ thead .ui-jqgrid-labels th[id$='_cb'] .s-ico {
 }
 /*tables pagination panel*/
 .supsystic-tbl-pagination-shell {
-	/*width: calc(100% - 450px);*/
-	margin-top: -7px;
+	/*width: calc(100% - 450px);
+	margin-top: -7px;*/
 }
 .supsystic-tbl-pagination-shell .ui-jqgrid-pager {
 	width: auto !important;

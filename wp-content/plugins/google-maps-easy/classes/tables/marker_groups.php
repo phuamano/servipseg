@@ -9,6 +9,7 @@ class tableMarker_groupsGmp extends tableGmp{
                 ->_addField('title', 'varchar', 'varchar', '255', '')
                 ->_addField('description', 'text', 'text', '', '')
 				->_addField('params', 'text', 'text', '', '')
+				->_addField('parent','int','int','0', '')
 				->_addField('sort_order','int','int','0', '');
     }
 }

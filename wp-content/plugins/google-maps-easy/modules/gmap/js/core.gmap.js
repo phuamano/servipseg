@@ -610,12 +610,14 @@ function gmpAutocomleateData(data, needle) {
 
 	for(var i = 0; i < data.length; i++) {
 		for(var j = 0; j < data[i].length; j++) {
-			var label = data[i][j].label.toLowerCase()
+			if(data[i][j]) {
+				var label = data[i][j].label.toString().toLowerCase()
 				,	desc = data[i][j].marker_desc != 'undefined' ? data[i][j].marker_desc : ''
 				,	term = needle.toLowerCase();
 
-			if(label.indexOf(term) !== -1 || (desc && desc.indexOf(term) !== -1)) {
-				autocomleateData.push(data[i][j]);
+				if(label.indexOf(term) !== -1 || (desc && desc.indexOf(term) !== -1)) {
+					autocomleateData.push(data[i][j]);
+				}
 			}
 		}
 	}

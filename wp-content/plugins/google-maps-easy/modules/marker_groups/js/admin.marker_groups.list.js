@@ -5,10 +5,11 @@ jQuery(document).ready(function(){
 	,	datatype: 'json'
 	,	autowidth: true
 	,	shrinkToFit: true
-	,	colNames:[toeLangGmp('ID'), toeLangGmp('Title'), toeLangGmp('Actions')]
+	,	colNames:[toeLangGmp('ID'), toeLangGmp('Title'), toeLangGmp('Parent'), toeLangGmp('Actions')]
 	,	colModel:[
 			{name: 'id', index: 'id', searchoptions: {sopt: ['eq']}, width: '50', align: 'center', key: true}
 		,	{name: 'title', index: 'title', searchoptions: {sopt: ['eq']}, align: 'center'}
+		,	{name: 'parent', index: 'parent', searchoptions: {sopt: ['eq']}, align: 'center', sortable: false}
 		,	{name: 'actions', index: 'actions', searchoptions: {sopt: ['eq']}, align: 'center', sortable: false}
 		]
 	,	postData: {
