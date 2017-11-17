@@ -173,7 +173,7 @@ input:focus {
  display: inline-block;
  font-size: 20px;
  border: 2px solid white;
- border-radius: 15px;
+ border-radius: 50px;
  transition: all 250ms;
  margin: 0 10px;
  text-shadow: 1px 1px black;
@@ -209,6 +209,12 @@ input:focus {
  padding: 10px;
  text-align: center;
 }
+
+#services li a img{
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
  
 #services h2, #contact-us h2 {
  font-size: 30px;

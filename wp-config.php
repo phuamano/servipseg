@@ -80,8 +80,8 @@ $table_prefix  = 'wp_';
  */
 define('WP_DEBUG', false);
 define('FS_METHOD','direct');
-/*define('WP_HOME','http://192.168.1.10/servipseg');*/
-/*define('WP_SITEURL','http://192.168.1.10/servipseg');*/
+define('WP_HOME','http://192.168.1.10/servipseg');
+define('WP_SITEURL','http://192.168.1.10/servipseg');
 
 /* That's all, stop editing! Happy blogging. */
 
